@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    margin-top: 50px;
+    /* margin-top: 50px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -14,14 +14,31 @@ body {
     align-items: center;
     padding: 10px;
     border-radius: 5%;
-    box-shadow: 5px 10px rgb(120, 119, 119) ;
+    box-shadow: 5px 10px rgb(120, 119, 119) ; */
+    margin-top : 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5%;
+    box-shadow: 5px 10px rgb(120, 119, 119);
 }
 
 .monitor {
     margin-top: 10px;
+    display: flex;
     background-color: black;
     width: 90%;
     height: 20%;
+    color: white;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .operator {
@@ -38,6 +55,8 @@ body {
     border-radius: 10%; 
     border-color: antiquewhite;
     box-shadow: 1px #003285;
+    cursor: pointer;
+
 }
 .operator input:hover {
     background-color: antiquewhite;
@@ -51,7 +70,7 @@ body {
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
     /* background-color: rgb(171, 171, 150); */
 }
 
@@ -66,13 +85,20 @@ body {
 
 }
 .group-button input {
-    background-color: #003285;
+    /* background-color: #003285;
     color: white;
     width: 100%;
     border-radius: 5%;
     font-size: 15px;
     box-shadow: 1px 1px #dce5f5;
-
+    cursor: pointer; */
+    background-color: #003285 ;
+    color: white;
+    width: 100%;
+    border-radius: 5%;
+    font-size: 15px;
+    box-shadow: 1px 1px #dce5f5;
+    cursor: pointer;
 
 }
 .group-button input:hover {
@@ -112,11 +138,14 @@ body {
     font-size: 20px;
     box-shadow: 1px 1px #003285;
     color: #003285;
+    
 }
 
 .reset:hover {
     background-color: rgb(130, 126, 119);
     color: rgb(255, 255, 255);
+    cursor: pointer;
+
 }
 
 .result {
@@ -134,4 +163,6 @@ body {
 .result:hover {
     background-color: rgb(130, 126, 119);
     color: rgb(255, 255, 255);
+    cursor: pointer;
+
 }

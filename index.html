@@ -8,43 +8,44 @@
 </head>
 <body>
     <div class="container">
-        <div class="monitor"><p style="color: white; text-align: end; margin-right: 10px;">100</p></div>
-        <div class="operator">
+        <div class="monitor" id="monitor"></div>
+        <div class="operator" id="operator">
             <input type="button" value="+">
             <input type="button" value="-">
             <input type="button" value="*">
             <input type="button" value="/">
         </div>
 
-        <div class="button">
+        <div class="button" id="button">
             <div class="num-button">
                 <div class="group-button">
-                    <input type="button" value="7">
-                    <input type="button" value="8">
-                    <input type="button" value="9">
+                    <input onclick=addNum7() type="button" value="7">
+                    <input onclick=addNum8() type="button" value="8">
+                    <input onclick=addNum9() type="button" value="9">
                 </div>
                 <div class="group-button">
-                    <input type="button" value="4">
-                    <input type="button" value="5">
-                    <input type="button" value="6">
+                    <input onclick=addNum4() type="button" value="4">
+                    <input onclick=addNum5() type="button" value="5">
+                    <input onclick=addNum6() type="button" value="6">
                 </div>
                 <div class="group-button">
-                    <input type="button" value="1">
-                    <input type="button" value="2">
-                    <input type="button" value="3">
+                    <input onclick=addNum1() type="button" value="1">
+                    <input onclick=addNum2() type="button" value="2">
+                    <input onclick=addNum3() type="button" value="3">
                 </div>
                 <div class="group-button">
-                    <input type="button" value="0">
-                    <input type="button" value=".">
+                    <input onclick=addNum0()  type="button" value="0">
+                    <input onclick=addDecimal() type="button" value=".">
                 </div>
             </div>
             <div class="final-operator">
-                <input class="reset" type="button" value="AC">
+                <input onclick=allClear() class="reset" type="button" value="AC">
                 <input class="result" type="button" value="=">
             </div>
         </div>
         </div>
-    </div>    
+    </div> 
+    <script src="script.js"></script>   
 </body>
 </html>
 
