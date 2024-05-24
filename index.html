@@ -10,7 +10,7 @@
     <div class="container">
         <div class="monitor" id="monitor">0</div>
         <div class="operator" id="operator">
-            <input onclick=addPlus() type="button" value="+">
+            <input onclick=evenOperation() type="button" value="+" id="plus">
             <input onclick=addMinus() type="button" value="-">
             <input onclick=addMultiple() type="button" value="*">
             <input onclick=addDivide() type="button" value="/">
@@ -19,28 +19,28 @@
         <div class="button" id="button">
             <div class="num-button">
                 <div class="group-button">
-                    <input onclick=addNum7() type="button" value="7">
-                    <input onclick=addNum8() type="button" value="8">
-                    <input onclick=addNum9() type="button" value="9">
+                    <input onclick=evenTouch(7) type="button" value="7">
+                    <input onclick=evenTouch(8) type="button" value="8">
+                    <input onclick=evenTouch(9) type="button" value="9">
                 </div>
                 <div class="group-button">
-                    <input onclick=addNum4() type="button" value="4">
-                    <input onclick=addNum5() type="button" value="5">
-                    <input onclick=addNum6() type="button" value="6">
+                    <input onclick=evenTouch(4) type="button" value="4">
+                    <input onclick=evenTouch(5) type="button" value="5">
+                    <input onclick=evenTouch(6) type="button" value="6">
                 </div>
                 <div class="group-button">
-                    <input onclick=addNum1() type="button" value="1">
-                    <input onclick=addNum2() type="button" value="2">
-                    <input onclick=addNum3() type="button" value="3">
+                    <input onclick=evenTouch(1) type="button" value="1">
+                    <input onclick=evenTouch(2) type="button" value="2">
+                    <input onclick=evenTouch(3) type="button" value="3">
                 </div>
                 <div class="group-button">
-                    <input onclick=addNum0()  type="button" value="0">
+                    <input onclick=evenTouch(0)  type="button" value="0">
                     <input onclick=addDecimal() type="button" value=".">
                 </div>
             </div>
             <div class="final-operator">
                 <input onclick=allClear() class="reset" type="button" value="AC">
-                <input onclick=getResult() class="result" type="button" value="=">
+                <input onclick=calculate() class="result" type="button" value="=">
             </div>
         </div>
         </div>
