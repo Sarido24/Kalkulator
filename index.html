@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="monitor" id="monitor"></div>
+        <div class="monitor" id="monitor">0</div>
         <div class="operator" id="operator">
-            <input type="button" value="+">
-            <input type="button" value="-">
-            <input type="button" value="*">
-            <input type="button" value="/">
+            <input onclick=addPlus() type="button" value="+">
+            <input onclick=addMinus() type="button" value="-">
+            <input onclick=addMultiple() type="button" value="*">
+            <input onclick=addDivide() type="button" value="/">
         </div>
 
         <div class="button" id="button">
@@ -40,7 +40,7 @@
             </div>
             <div class="final-operator">
                 <input onclick=allClear() class="reset" type="button" value="AC">
-                <input class="result" type="button" value="=">
+                <input onclick=getResult() class="result" type="button" value="=">
             </div>
         </div>
         </div>
