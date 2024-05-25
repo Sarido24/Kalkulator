@@ -5,7 +5,7 @@ body {
 
 .container {
     margin-top : 50px;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/451/769/124/man-made-sticker-bomb-sticker-wallpaper-preview.jpg');
+    background-image: url('images/background-for-calculator.jpg');
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -175,7 +175,7 @@ body {
     box-shadow: 1px 1px #003285;
     font-size: 30px;
     color: #c5c3c3;
-    background-image: url("https://i.pinimg.com/736x/56/7c/e7/567ce7a14eb24e0548d6b1198f4d4ccf.jpg");
+    background-image: url("images/Messi-bg-CalResult.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
