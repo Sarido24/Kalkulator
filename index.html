@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Apa Ada Nya</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
@@ -35,11 +36,11 @@
                 </div>
                 <div class="group-button">
                     <input onclick=evenTouch(0)  type="button" value="0">
-                    <input onclick=addDecimal() type="button" value=".">
+                    <input onclick="evenTouch('.')" type="button" value=".">
                 </div>
             </div>
             <div class="final-operator">
-                <input onclick=deleteNum() class="deleteNum" type="button" value="Del">
+                <button onclick=deleteNum() class="deleteNum" type="button" ><i style="color: #e1d5d5;" class="fa-solid fa-delete-left"></i></button>
                 <input onclick=allClear() class="reset" type="button" value="AC">
                 <input onclick=calculate() class="result" type="button" value="=">
             </div>

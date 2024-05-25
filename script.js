@@ -73,9 +73,9 @@ let isSamadengan = false;
 //         return
 //     }
 // }
-// function addDecimal(){
-//     monitor.innerHTML += "."
-// }
+function addDecimal(){
+    monitor.innerHTML += "."
+}
 
 function allClear() {
         monitor.innerHTML = "0"
@@ -114,17 +114,26 @@ function evenOperation(operator){
         // let operatorElement = document.getElementById('operator');
         operation = operator;
         console.log("INI OPERATION    " + operation);
-    }else{
-        return
+    }else if(operation.length && angka2.toString().length){
+        calculate()
+    }else if(angka1 === 0 && !operation.length){
+        monitor.innerHTML = "-"
     }
     operation = operator
     
 }
 function evenTouch(number){
     // console.log(operation.length);
+    // console.log(typeof(number));
     if(!operation.length && angka1 === 0) {
-        monitor.innerHTML = number;
-        angka1 = number
+        if(typeof(number) === "string" ){
+            console.log(typeof(number));
+            monitor.innerHTML += number
+            angka1 += number
+        }else{
+            monitor.innerHTML = number;
+            angka1 = number
+        }
     }else if(!operation.length && angka1 !== 0) {
         monitor.innerHTML += number;
         angka1 = angka1.toString().concat(number.toString())
@@ -142,7 +151,7 @@ function evenTouch(number){
 
 
 function calculate(){
-    let result ;
+    let result = 0;
     if(operation === '+' ){
         result = Number(angka1) + Number(angka2);
         // console.log(result);
@@ -171,15 +180,11 @@ function calculate(){
     }
     monitor.innerHTML = `${result}`
 
-    console.log("INI OPERATION    " + operation);
+    console.log("Calculate    " + operation);
 }
 
-// function addNum(number){
-//     console.log(number);
-//     if(operation === '' || angka1 === 0){
-//         monitor.innerHTML = number
-//     }
-// }
+
+
 
 function deleteNum(){
     console.log("INI JALAN DELETE");
