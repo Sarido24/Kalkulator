@@ -10,10 +10,10 @@
     <div class="container">
         <div class="monitor" id="monitor">0</div>
         <div class="operator" id="operator">
-            <input onclick=evenOperation() type="button" value="+" id="plus">
-            <input onclick=addMinus() type="button" value="-">
-            <input onclick=addMultiple() type="button" value="*">
-            <input onclick=addDivide() type="button" value="/">
+            <input onclick="evenOperation('+')"   type="button" value="+">
+            <input onclick="evenOperation('-')" type="button" value="-">
+            <input onclick="evenOperation('x')" type="button" value="x">
+            <input onclick="evenOperation('÷ ')" type="button" value="÷ ">
         </div>
 
         <div class="button" id="button">
@@ -39,6 +39,7 @@
                 </div>
             </div>
             <div class="final-operator">
+                <input onclick=deleteNum() class="deleteNum" type="button" value="Del">
                 <input onclick=allClear() class="reset" type="button" value="AC">
                 <input onclick=calculate() class="result" type="button" value="=">
             </div>

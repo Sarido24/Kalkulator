@@ -106,19 +106,18 @@ function allClear() {
 //     monitor.innerHTML = eval(monitor.innerHTML)
 // }
 
-
-
-function evenOperation(){
-    console.log(angka1);
-    console.log(operation.length);
+function evenOperation(operator){
+    // console.log(operator);
+    // console.log(angka1);
+    // console.log(operation.length);
     if(angka1 !== 0 && operation.length === 0){
-        let plusElement = document.getElementById('plus');
-        operation = plusElement.value;
+        // let operatorElement = document.getElementById('operator');
+        operation = operator;
         console.log("INI OPERATION    " + operation);
     }else{
         return
     }
-    // operation = operator
+    operation = operator
     
 }
 function evenTouch(number){
@@ -143,14 +142,35 @@ function evenTouch(number){
 
 
 function calculate(){
+    let result ;
     if(operation === '+' ){
-        let result = Number(angka1) + Number(angka2);
-        console.log(result);
-        monitor.innerHTML = `${result}`
+        result = Number(angka1) + Number(angka2);
+        // console.log(result);
         angka1 = result
         angka2 = 0
         operation = ''
+    }else if(operation === '-'){
+        result = Number(angka1) - Number(angka2);
+        // console.log(result);
+        angka1 = result
+        angka2 = 0
+        operation = ''
+    }else if(operation === 'x'){
+        result = Number(angka1) * Number(angka2);
+        // console.log(result);
+        angka1 = result
+        angka2 = 0
+        operation = ''
+    }else if(operation === '÷ '){
+        result = Number(angka1) / Number(angka2);
+        // console.log(result);
+        angka1 = result
+        angka2 = 0
+        operation = ''
+
     }
+    monitor.innerHTML = `${result}`
+
     console.log("INI OPERATION    " + operation);
 }
 
@@ -160,3 +180,22 @@ function calculate(){
 //         monitor.innerHTML = number
 //     }
 // }
+
+function deleteNum(){
+    console.log("INI JALAN DELETE");
+    // console.log(angka1.toString().length);
+    if(angka1.toString().length === 1 && !operation.length){
+        angka1 = 0
+        monitor.innerHTML = angka1
+    }else if(angka1.toString().length > 1 && !operation.length){
+        angka1 = angka1.slice(0, -1)
+        monitor.innerHTML = angka1
+    }else if(operation.length && angka2.toString().length === 1){
+        angka2 = 0
+        monitor.innerHTML = angka2
+    }else if(operation.length && angka2.toString().length > 1){
+        angka2 = angka2.slice(0, -1)
+        monitor.innerHTML = angka2
+
+    }
+}
