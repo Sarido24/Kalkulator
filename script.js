@@ -45,13 +45,18 @@ function evenTouch(number){
         angka1 = angka1.toString().concat(number.toString())
         console.log("INI AngkaPertama" + "  " + angka1);
     }else if(operation.length && angka2 === 0){
-        monitor.innerHTML = number
-        angka2 = number
+        if(number === '.'){
+        monitor.innerHTML += number
+        angka2 += number
+        }else{
+            monitor.innerHTML = number
+            angka2 = number
+        }
     }else if(operation.length && angka2 !== 0){
         monitor.innerHTML += number
         angka2 = angka2.toString().concat(number.toString())
         console.log("ini angkaKedua" +"  "+ angka2);
-    } 
+    }
         
 }
 
