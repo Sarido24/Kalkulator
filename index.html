@@ -8,45 +8,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div class="monitor" id="monitor">0</div>
-        <div class="operator" id="operator">
-            <input onclick="evenOperation('+')"   type="button" value="+">
-            <input onclick="evenOperation('-')" type="button" value="-">
-            <input onclick="evenOperation('x')" type="button" value="x">
-            <input onclick="evenOperation('÷ ')" type="button" value="÷ ">
-        </div>
+    <div class="wrap">
+        <div class="container">
+            <div class="monitor" id="monitor">0</div>
+            <div class="operator" id="operator">
+                <input onclick="evenOperation('+')"   type="button" value="+">
+                <input onclick="evenOperation('-')" type="button" value="-">
+                <input onclick="evenOperation('x')" type="button" value="x">
+                <input onclick="evenOperation('÷ ')" type="button" value="÷ ">
+            </div>
 
-        <div class="button" id="button">
-            <div class="num-button">
-                <div class="group-button">
-                    <input onclick=evenTouch(7) type="button" value="7">
-                    <input onclick=evenTouch(8) type="button" value="8">
-                    <input onclick=evenTouch(9) type="button" value="9">
+            <div class="button" id="button">
+                <div class="num-button">
+                    <div class="group-button">
+                        <input onclick=evenTouch(7) type="button" value="7">
+                        <input onclick=evenTouch(8) type="button" value="8">
+                        <input onclick=evenTouch(9) type="button" value="9">
+                    </div>
+                    <div class="group-button">
+                        <input onclick=evenTouch(4) type="button" value="4">
+                        <input onclick=evenTouch(5) type="button" value="5">
+                        <input onclick=evenTouch(6) type="button" value="6">
+                    </div>
+                    <div class="group-button">
+                        <input onclick=evenTouch(1) type="button" value="1">
+                        <input onclick=evenTouch(2) type="button" value="2">
+                        <input onclick=evenTouch(3) type="button" value="3">
+                    </div>
+                    <div class="group-button">
+                        <input onclick=evenTouch(0)  type="button" value="0">
+                        <input onclick="evenTouch('.')" type="button" value=".">
+                    </div>
                 </div>
-                <div class="group-button">
-                    <input onclick=evenTouch(4) type="button" value="4">
-                    <input onclick=evenTouch(5) type="button" value="5">
-                    <input onclick=evenTouch(6) type="button" value="6">
-                </div>
-                <div class="group-button">
-                    <input onclick=evenTouch(1) type="button" value="1">
-                    <input onclick=evenTouch(2) type="button" value="2">
-                    <input onclick=evenTouch(3) type="button" value="3">
-                </div>
-                <div class="group-button">
-                    <input onclick=evenTouch(0)  type="button" value="0">
-                    <input onclick="evenTouch('.')" type="button" value=".">
+                <div class="final-operator">
+                    <button onclick=deleteNum() class="deleteNum" type="button" ><i style="color: #e1d5d5;" class="fa-solid fa-delete-left"></i></button>
+                    <input onclick=allClear() class="reset" type="button" value="AC">
+                    <input onclick=calculate() class="result" type="button" value="=">
                 </div>
             </div>
-            <div class="final-operator">
-                <button onclick=deleteNum() class="deleteNum" type="button" ><i style="color: #e1d5d5;" class="fa-solid fa-delete-left"></i></button>
-                <input onclick=allClear() class="reset" type="button" value="AC">
-                <input onclick=calculate() class="result" type="button" value="=">
-            </div>
         </div>
-        </div>
-    </div> 
+    </div>
     <script src="script.js"></script>   
 </body>
 </html>
