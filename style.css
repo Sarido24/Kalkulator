@@ -3,13 +3,6 @@ body {
     background-color: rgb(201, 190, 176);    
 }
 
-.wrap{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .container {
     background-image: url('images/background-for-calculator.jpg');
     display: flex;
